@@ -26,6 +26,8 @@ class CSVLink extends React.Component {
    * In IE11 this method will trigger the file download
    */
   handleLegacy(event, isAsync = false) {
+    console.log("called-5")
+const vartiable1 = "var-1"
     // If this browser is IE 11, it does not support the `download` attribute
     if (window.navigator.msSaveOrOpenBlob) {
       // Stop the click propagation
@@ -50,6 +52,8 @@ class CSVLink extends React.Component {
   }
 
   handleAsyncClick(event) {
+    console.log("called-4")
+
     const done = proceed => {
       if (proceed === false) {
         event.preventDefault();
@@ -62,6 +66,8 @@ class CSVLink extends React.Component {
   }
 
   handleSyncClick(event) {
+    console.log("called-3")
+
     const stopEvent = this.props.onClick(event) === false;
     if (stopEvent) {
       event.preventDefault();
@@ -71,6 +77,8 @@ class CSVLink extends React.Component {
   }
 
   handleClick() {
+    console.log("called-2")
+
     return event => {
       if (typeof this.props.onClick === 'function') {
         return this.props.asyncOnClick
@@ -97,7 +105,7 @@ class CSVLink extends React.Component {
 
     const isNodeEnvironment = typeof window === 'undefined';
     const href = isNodeEnvironment ? '' : this.buildURI(data, uFEFF, headers, separator, enclosingCharacter)
-
+console.log("called-1")
     return (
       <a
         download={filename}
