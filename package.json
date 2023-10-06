@@ -1,6 +1,6 @@
 {
   "name": "@airking05/react-csv",
-  "version": "2.2.2",
+  "version": "1.0.0",
   "description": "Build CSV files on the fly basing on Array/literal object of data ",
   "main": "index.js",
   "jsnext:main": "src/index.js",
@@ -17,10 +17,6 @@
     "docgen": "documentation build  src/** -f html -o docs",
     "styleguide-server": "styleguidist server",
     "styleguide-build": "styleguidist build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/airKing05/your-repo-name.git"
   },
   "keywords": [
     "csv",
